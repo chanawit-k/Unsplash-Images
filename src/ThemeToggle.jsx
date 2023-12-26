@@ -4,13 +4,15 @@ import { CiDark, CiSun } from 'react-icons/ci'
 const ThemeToggle = () => {
   const { isDarkTheme, toggleDarkTheme } = useGlobalContext()
   return (
-    <body className={isDarkTheme && 'dark-theme'}>
-      {isDarkTheme ? (
-        <CiDark onClick={toggleDarkTheme} />
-      ) : (
-        <CiSun onClick={toggleDarkTheme} />
-      )}
-    </body>
+    <section className="toggle-container">
+      <button className="dark-toggle">
+        {isDarkTheme ? (
+          <CiDark onClick={toggleDarkTheme} className="toggle-icon" />
+        ) : (
+          <CiSun onClick={toggleDarkTheme} className="toggle-icon" />
+        )}
+      </button>
+    </section>
   )
 }
 
