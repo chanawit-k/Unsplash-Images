@@ -1,4 +1,6 @@
+import ThemeToggle from './ThemeToggle'
+
 const App = () => {
-  return <h1>Unsplash Images Starter</h1>
+  return <ThemeToggle />
 }
 export default App
