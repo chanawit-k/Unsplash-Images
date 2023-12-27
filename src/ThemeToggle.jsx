@@ -5,11 +5,11 @@ const ThemeToggle = () => {
   const { isDarkTheme, toggleDarkTheme } = useGlobalContext()
   return (
     <section className="toggle-container">
-      <button className="dark-toggle">
+      <button className="dark-toggle" onClick={toggleDarkTheme}>
         {isDarkTheme ? (
-          <CiDark onClick={toggleDarkTheme} className="toggle-icon" />
+          <CiDark className="toggle-icon" />
         ) : (
-          <CiSun onClick={toggleDarkTheme} className="toggle-icon" />
+          <CiSun className="toggle-icon" />
         )}
       </button>
     </section>
